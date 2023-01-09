@@ -1,0 +1,259 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: 'Poppins',sans-serif;
+}
+
+input{
+  display: none;
+}
+.menu{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom:2px ;
+  border-color: black;
+  border-style: solid;
+}
+.nav .logo img{
+  width: 40px;
+  height: auto;
+  margin-top: 5px;
+}
+.nav{
+  display:flex;
+  width: 1000px;
+  margin: auto;
+  
+}
+.nav .nav__pc{
+  width: 700px;
+  margin-left: auto;
+}
+.nav__list{
+  display: flex;
+  justify-content: content;
+  list-style: none;
+  
+}
+.nav__list i{
+ font-size: 20px;
+ margin-left: 10px;
+ color: black;
+}
+.nav__list .icon{
+  margin-left: auto;
+  display: flex;
+}
+.nav__list i:hover{
+  color: red;
+  transition: 0.2s;
+}
+.nav__link{
+  padding: 6px 20px 6px 20px;
+  font-family: 'Poppins',sans-serif;
+  color: black;
+  text-decoration: none;
+}
+.nav__link:hover{
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+}
+.nav__bar-btn{
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.nav__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  display: none;
+  z-index: 81;
+}
+
+.nav__mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 270px;
+    background-color:rgb(255, 255, 255);
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+    z-index: 91;
+}
+.nav__mobile-list a{
+  font-size: 18px;
+}
+.nav__mobile-link{
+  display:block;
+  padding: 20px 20px 20px 20px;
+  font-family: 'Poppins',sans-serif;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+.nav__mobile-link:hover{
+  background-color: rgb(236, 26, 26);
+  color: white;
+  border-radius: 3px;
+}
+
+.nav__mobile-list{
+  padding: 0;
+}
+.nav__mobile-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:20px;
+  height: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav__input:checked ~ .nav__mobile{
+  transform: translateX(0);
+}
+.nav__input:checked ~.nav__overlay{
+  display: block;
+}
+
+@media (max-width:1023px){
+  .nav__bar-btn{
+    display: block;
+  }
+  .nav__pc{
+    display:none;
+  }
+  .nav .logo img{
+  display: none;
+}
+}
+.container{
+  width: 1000px;
+  height: 800px;
+  margin: auto;
+}
+.triangle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 70%;
+    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #e90e0e 50%, #e90e0e 100%);
+}
+.text{
+  width: 360px;
+  height: 200px;
+  margin-top: 150px;
+  
+}
+.text h1{
+  font-size: 40px;
+}
+.text a{
+  padding: 15px 23px 15px 23px;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  position: relative;
+  top:5%;
+  font-weight: 500;
+}
+.text a:hover{
+  background-color: #e90e0e;
+  color: white;
+  transition: 0.3s;
+}
+.flexitem{
+  display: flex;
+  justify-content: space-between;
+}
+.alllap{
+  display: flex;
+  justify-content: space-between;
+}
+.alllap #imgfix{
+  width: 220px;
+  height: 210px;
+}
+.searchmb, .cartmb{
+  display: none;
+}
+@media screen and (max-width:600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+  .container{
+    width: 380px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .flexitem {
+    display: block;
+  }
+  .lapmain img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+  }
+  .triangle{
+    z-index: -10;
+    width: 70%;
+    height: 60%;
+  }
+  .alllap{
+    display: none;
+  }
+  .text{
+    margin-top: 100px;
+    
+    text-align: center;
+  }
+  .text a{
+    text-align: center;
+   
+  }
+  .text p{
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .searchmb {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top:10px;
+    color:black;
+  }
+  .cartmb{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top:10px;
+    color:black;
+  }
+}

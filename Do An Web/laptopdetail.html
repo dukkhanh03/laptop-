@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="laptopdetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="laptopdetail.js"></script>
+    <script src="specfication.js"></script>
+            
+</head>
+<body>
+   <!-- header section starts  -->
+   
+<!-- header section ends -->
+
+<!-- detaillap -->
+  <div class="container">
+    <div class="boxlap">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="anhsanpham/Rectangle 63.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="anhsanpham/slidelap2fix.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="anhsanpham/slidelap1.png" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="anhsanpham/slidelap3.png" style="width:100%">
+        </div>  
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="anhsanpham/Rectangle 63.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="anhsanpham/slidelap2fix.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="anhsanpham/slidelap1.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="anhsanpham/slidelap3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+        </div>
+        <!-- slidelapjs -->
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("demo");
+              let captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+          </script>
+        <!--endslidelapjs -->
+      
+      <button class="butspec" onclick="openPopup()">specifications <i class="fa-solid fa-laptop"></i></button> <!-- Button mở popup -->
+      <div id="overlays">    
+          <a href="javascript:void(0)" class="closebtn" onclick="closePopup()">×</a> <!-- Button đóng popup -->
+          <div id="overlay">
+              <!-- Nội dung trong Popup --> 
+                  <div class="spec">
+                      <p class="title"> Manufacturer</p>
+                      <p>CPU Technology
+                      Intel® Core™ i7-12700H</p>
+                      <p>Multiplier
+                          14</p>
+                      <p>Cache 24MB</p>
+                      <p class="title">Internal Memory (RAM)</p>
+                      <p>Type of RAM
+                          DDR5</p>
+                      <p>RAM Bus Speed
+                          4800Mhz</p>
+                      <p>Number of slots
+                          2 slots
+                          </p>
+                      <p>Maximum RAM support
+                          Up to 32GB upgrade</p>
+                      <p class="title">Hard Drive
+                      </p>
+                      <p>Capacity
+                          512GB M.2 NVMe™ PCIe® 3.0 . SSD</p>
+                      <p class="title">
+                          Display
+                      </p>
+                      <p>Screen size
+                          15.6 inches</p>
+                      <p>Resolution
+                          FHD (1920 x 1080)</p>
+                      <p>Scan frequency
+                          144Hz
+                          </p>
+                      <p>Screen technology
+                          16:9, 144Hz, Value IPS-level, NTSC 45%, SRGB 62.5%
+                      </p>
+                  </div>    
+              </div>
+      </div>
+      <div class="detail">
+        <h2>Detail laptop</h2>
+        <p><i style="color: rgb(221, 184, 20);" class="fa-solid fa-star"></i> Bold gaming style
+        </p>
+        <p><i style="color: rgb(221, 184, 20);" class="fa-solid fa-star"></i> Ready to fight all kinds of games
+        </p>
+        <p><i style="color: rgb(221, 184, 20);" class="fa-solid fa-star"></i> Experience the beauty through the screen on ASUS TUF Dash F15 FX517ZM HN480W
+        </p>
+        <p><i style="color: rgb(221, 184, 20);" class="fa-solid fa-star"></i> Lively, full of sound
+        </p>
+        <p><i style="color: rgb(221, 184, 20);" class="fa-solid fa-star"></i> Various connection ports
+        </p>
+      </div>
+   </div>
+    
+    <div class="info">
+        <h1>Laptop Asus TUF Gaming F15 FX507ZC-HN124W</h1>
+        <div id="hrtag"></div>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     CPU: Intel® Core™ i7-12700H (upto 4.70 GHz, 24MB)</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     RAM: 8GB DDR5-4800Mhz (32GB)</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     Hard Drive: 512GB M.2 NVMe™ PCIe® 3.0 SSD + 1slost M2 PCIe®</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     VGA: NVIDIA® GeForce RTX™ 3050 4GB GDDR6</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     Display: 15.6-inch FHD (1920 x 1080) 16:9, 144Hz, Value IPS-level, NTSC 45%, SRGB 62.5%</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     Battery: 4-cell, 56WHrs</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     Weigh: 2.20 Kg</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     Color: Jaeger Gray</p>
+        <p><i class="fa-regular fa-circle-check" style="color: red;"></i>     OS: Windows 11 Home</p>
+        <div class="price">
+          <div class="pinfo">
+
+            <p >Listed price: <span style="color: rgb(85, 82, 82); font-family: 'Poppins';">644.97$</span> </p>
+            <p style="margin-top: 1px;">Discount price: <span style="color: rgb(238, 47, 47); font-size: 20px; font-weight: bold; font-family: 'Poppins';">483.47$</span> </p>
+            <p style="float: left;">Discount time left</p>
+           
+            <div id="countdown">
+              <ul>
+                <li><span class="day" id="days"></span></li>
+                <li><span id="hours"></span></li>
+                <li><span id="minutes"></span></li>
+                <li><span id="seconds"></span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="allbuy">
+          <div class="buynow">
+          <a href=""> BUY&nbsp&nbspNOW  </a>
+        </div>
+        <div class="flexbuy">
+            <div class="installment">
+            <a href="">INSTALLMENT
+            </a>  
+            </div>
+          <div class="cart">
+            <a href="">ADD TO CART</a>
+          </div>
+        </div>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+
+
+
+
+<!-- endetaillap -->
+
+<div class="footer">
+    <footer class="footer-distributed">
+        <div class="account">
+            <div class="text">
+                <h2>Do you have an account?</h2>
+            </div>
+            <div class="sign">
+                <a href="login.html" target="_blank">Sign in</a>
+            </div>
+    </div>
+    <div class="footer-left">
+
+        <h3>Lap<span>R</span></h3>
+
+        <p class="footer-company-name">Company Name © 2015</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
+</div>
+
+</body>
+</html>
