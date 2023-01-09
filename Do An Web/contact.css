@@ -11,9 +11,11 @@
   text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  
 }
 input{
   display: none;
+  color :red;
 }
 .nav__list .icon{
   margin-top: 5px;
